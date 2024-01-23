@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 import ViewCounter from './view-counter';
 import { getViewsCount } from 'app/db/queries';
@@ -10,6 +11,7 @@ export const metadata = {
 };
 
 export default function BlogPage() {
+  redirect('/');
   let allBlogs = getBlogPosts();
 
   return (

@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import { auth } from 'app/auth';
 import { getGuestbookEntries } from 'app/db/queries';
 import { SignIn, SignOut } from './buttons';
@@ -10,6 +11,7 @@ export const metadata = {
 };
 
 export default function GuestbookPage() {
+  redirect('/');
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">

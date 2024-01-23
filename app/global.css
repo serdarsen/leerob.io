@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .scrollbar--hidden::-webkit-scrollbar {
+      display: none;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+      width: 5px;
+      background-color: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+      box-shadow: unset;
+      background-color: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+      background-color: #6B6B6B;
+      border-radius: 4px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #7B7B7B;
+  }
+
+  .dark .scrollbar::-webkit-scrollbar-thumb {
+      background-color: #6B6B6B;
+  }
+
+  .dark .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #7B7B7B;
+  }
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;

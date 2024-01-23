@@ -2,8 +2,8 @@
 
 import { auth } from 'app/auth';
 import { type Session } from 'next-auth';
+import { unstable_noStore as noStore, revalidatePath } from 'next/cache';
 import { sql } from './postgres';
-import { revalidatePath, unstable_noStore as noStore } from 'next/cache';
 
 export async function increment(slug: string) {
   noStore();
@@ -50,8 +50,8 @@ export async function saveGuestbookEntry(formData: FormData) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'guestbook@leerob.io',
-      to: 'me@leerob.io',
+      from: 'guestbook@serdarsen.com',
+      to: 'me@serdarsen.com',
       subject: 'New Guestbook Entry',
       html: `<p>Email: ${email}</p><p>Message: ${body}</p>`,
     }),
@@ -65,7 +65,7 @@ export async function deleteGuestbookEntries(selectedEntries: string[]) {
   let session = await getSession();
   let email = session.user?.email as string;
 
-  if (email !== 'me@leerob.io') {
+  if (email !== 'me@serdarsen.com') {
     throw new Error('Unauthorized');
   }
 

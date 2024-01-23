@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Uses',
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function UsesPage() {
+  redirect('/');
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
