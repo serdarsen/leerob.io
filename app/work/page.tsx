@@ -98,7 +98,7 @@ export default function Page() {
           </li>
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter"><a href="https://gelecegiyazanlar.turkcell.com.tr/">Freelance</a></h2>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">Freelance</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Mobile Application Developer, 06/2017 - 10/2017
         </p>
