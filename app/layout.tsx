@@ -8,16 +8,16 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SandpackCSS } from './blog/[slug]/sandpack';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://serdarsen.com'),
+  metadataBase: new URL('https://www.serdarsen.com/'),
   title: {
     default: 'Serdar ŞEN',
     template: '%s | Serdar ŞEN',
   },
-  description: 'Developer, writer, and creator.',
+  description: 'Full Stack Developer',
   openGraph: {
     title: 'Serdar ŞEN',
-    description: 'Developer, writer, and creator.',
-    url: 'https://serdarsen.com',
+    description: 'Full Stack Developer',
+    url: 'https://www.serdarsen.com/',
     siteName: 'Serdar ŞEN',
     locale: 'en_US',
     type: 'website',

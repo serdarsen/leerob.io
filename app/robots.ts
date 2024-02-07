@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: '*',
       },
     ],
-    sitemap: 'https://serdarsen.com/sitemap.xml',
-    host: 'https://serdarsen.com',
+    sitemap: 'https://www.serdarsen.com//sitemap.xml',
+    host: 'https://www.serdarsen.com/',
   };
 }

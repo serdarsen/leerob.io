@@ -23,8 +23,8 @@ export async function generateMetadata({
     image,
   } = post.metadata;
   let ogImage = image
-    ? `https://serdarsen.com${image}`
-    : `https://serdarsen.com/og?title=${title}`;
+    ? `https://www.serdarsen.com/${image}`
+    : `https://www.serdarsen.com//og?title=${title}`;
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://serdarsen.com/blog/${post.slug}`,
+      url: `https://www.serdarsen.com//blog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -108,9 +108,9 @@ function Blog({ params }) {
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
             image: post.metadata.image
-              ? `https://serdarsen.com${post.metadata.image}`
-              : `https://serdarsen.com/og?title=${post.metadata.title}`,
-            url: `https://serdarsen.com/blog/${post.slug}`,
+              ? `https://www.serdarsen.com/${post.metadata.image}`
+              : `https://www.serdarsen.com//og?title=${post.metadata.title}`,
+            url: `https://www.serdarsen.com//blog/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'Serdar ŞEN',
